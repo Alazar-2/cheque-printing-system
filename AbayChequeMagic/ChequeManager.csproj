@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5636D60-FCCC-435B-BF5B-6B03A2F60277}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbayChequeMagic</RootNamespace>
+    <AssemblyName>AbayChequeMagic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add printer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add printer.Designer.cs">
+      <DependentUpon>Add printer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\General\BatchPrint.cs" />
+    <Compile Include="Class\General\CheckedComboBoxItem.cs" />
+    <Compile Include="Class\General\Common.cs" />
+    <Compile Include="Class\General\DBConnection.cs" />
+    <Compile Include="Class\General\DragableLabel.cs" />
+    <Compile Include="Class\General\FigursToWords.cs" />
+    <Compile Include="Class\General\GlobalVariables.cs" />
+    <Compile Include="Class\General\Messages.cs" />
+    <Compile Include="Class\General\PrintCoveringLetter.cs" />
+    <Compile Include="Class\General\PrintingType.cs" />
+    <Compile Include="Class\Info\AccountInfo.cs" />
+    <Compile Include="Class\Info\AuthorizedSignatoryInfo.cs" />
+    <Compile Include="Class\Info\AutorisedImageInfo.cs" />
+    <Compile Include="Class\Info\BankInfo.cs" />
+    <Compile Include="Class\Info\ChequeBookInfo.cs" />
+    <Compile Include="Class\Info\ChequeLayoutInfo.cs" />
+    <Compile Include="Class\Info\CompanyInfo.cs" />
+    <Compile Include="Class\Info\CurrencyInfo.cs" />
+    <Compile Include="Class\Info\DateFormatInfo.cs" />
+    <Compile Include="Class\Info\DimensionInfo.cs" />
+    <Compile Include="Class\Info\EmployeeInfo.cs" />
+    <Compile Include="Class\Info\ExpenseInfo.cs" />
+    <Compile Include="Class\Info\FieldInfo.cs" />
+    <Compile Include="Class\Info\ImageUpdateInfo.cs" />
+    <Compile Include="Class\Info\leafDetailsInfo.cs" />
+    <Compile Include="Class\Info\LeafInfo.cs" />
+    <Compile Include="Class\Info\LetterImageInfo.cs" />
+    <Compile Include="Class\Info\LetterInfo.cs" />
+    <Compile Include="Class\Info\LetterSignatoryInfo.cs" />
+    <Compile Include="Class\Info\PayeeAccountDetailsInfo.cs" />
+    <Compile Include="Class\Info\PayeeInfo.cs" />
+    <Compile Include="Class\Info\PrinterInfo.cs" />
+    <Compile Include="Class\Info\RightInfo.cs" />
+    <Compile Include="Class\Info\StatusInfo.cs" />
+    <Compile Include="Class\Info\TransactionInfo.cs" />
+    <Compile Include="Class\Info\UserInfo.cs" />
+    <Compile Include="Class\Info\UserRightInfo.cs" />
+    <Compile Include="Class\Info\UserTypeInfo.cs" />
+    <Compile Include="Class\SP\AccountSP.cs" />
+    <Compile Include="Class\SP\AuthorizedSignatorySP.cs" />
+    <Compile Include="Class\SP\AutorisedImageSp.cs" />
+    <Compile Include="Class\SP\BankSP.cs" />
+    <Compile Include="Class\SP\ChequeBookSP.cs" />
+    <Compile Include="Class\SP\ChequeLayoutSP.cs" />
+    <Compile Include="Class\SP\CompanySP.cs" />
+    <Compile Include="Class\SP\CurrencySP.cs" />
+    <Compile Include="Class\SP\DateFormatSP.cs" />
+    <Compile Include="Class\SP\DimensionSP.cs" />
+    <Compile Include="Class\SP\EmployeeSp.cs" />
+    <Compile Include="Class\SP\ExpenseSP.cs" />
+    <Compile Include="Class\SP\FieldSP.cs" />
+    <Compile Include="Class\SP\ImageUpdateSp.cs" />
+    <Compile Include="Class\SP\leafDetailsSP.cs" />
+    <Compile Include="Class\SP\LeafSP.cs" />
+    <Compile Include="Class\SP\LetterImageSp.cs" />
+    <Compile Include="Class\SP\LetterSignatorySP.cs" />
+    <Compile Include="Class\SP\LetterSP.cs" />
+    <Compile Include="Class\SP\PayeeAccountDetailsSP.cs" />
+    <Compile Include="Class\SP\PayeeSP.cs" />
+    <Compile Include="Class\SP\PrinterSP.cs" />
+    <Compile Include="Class\SP\RightSP.cs" />
+    <Compile Include="Class\SP\StatusSP.cs" />
+    <Compile Include="Class\SP\TransactionSP.cs" />
+    <Compile Include="Class\SP\UserRightSP.cs" />
+    <Compile Include="Class\SP\UserSP.cs" />
+    <Compile Include="Class\SP\UserTypeSP.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChequeDetailsHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChequeDetailsHome.Designer.cs">
+      <DependentUpon>frmChequeDetailsHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChequeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChequeEntry.Designer.cs">
+      <DependentUpon>frmChequeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChequeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChequeStatus.Designer.cs">
+      <DependentUpon>frmChequeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMdiHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMdiHeader.Designer.cs">
+      <DependentUpon>frmMdiHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectCheque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectCheque.Designer.cs">
+      <DependentUpon>frmSelectCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovableControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovableControl.Designer.cs">
+      <DependentUpon>MovableControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMessageBox.Designer.cs">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add printer.resx">
+      <DependentUpon>Add printer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\crptPaymentVoucherPrint.rdlc" />
+    <EmbeddedResource Include="frmChequeDetailsHome.resx">
+      <DependentUpon>frmChequeDetailsHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChequeEntry.resx">
+      <DependentUpon>frmChequeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChequeStatus.resx">
+      <DependentUpon>frmChequeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMdiHeader.resx">
+      <DependentUpon>frmMdiHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectCheque.resx">
+      <DependentUpon>frmSelectCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovableControl.resx">
+      <DependentUpon>MovableControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AccountPayee.png" />
+    <Content Include="Resources\Add-256.png" />
+    <Content Include="Resources\bg.jpg" />
+    <Content Include="Resources\brearerStrike.bmp" />
+    <Content Include="Resources\Close.png" />
+    <Content Include="Resources\Close1.png" />
+    <Content Include="Resources\DefaultStamp.bmp" />
+    <Content Include="Resources\DefaultStamp1.bmp" />
+    <Content Include="Resources\DetailsBg.gif" />
+    <Content Include="Resources\DetailsBottom.gif" />
+    <Content Include="Resources\header.png" />
+    <Content Include="Resources\headerMDI.jpg" />
+    <Content Include="Resources\Icon.ico" />
+    <Content Include="Resources\Information.png" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\MDI.gif" />
+    <Content Include="Resources\mdiBg.jpg" />
+    <Content Include="Resources\MDIHeader.gif" />
+    <Content Include="Resources\MDIHeader.jpg" />
+    <Content Include="Resources\MDIHeader1.gif" />
+    <Content Include="Resources\MDIHeader1.jpg" />
+    <Content Include="Resources\notAbove.png" />
+    <Content Include="Resources\notAbove1.png" />
+    <Content Include="Resources\notNegotiable.png" />
+    <Content Include="Resources\notNegotiable1.png" />
+    <Content Include="Resources\payableAtPar.png" />
+    <Content Include="Resources\payableAtPar1.png" />
+    <Content Include="Resources\Question.png" />
+    <Content Include="Resources\search.png" />
+    <Content Include="Resources\Warning.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
