@@ -34,6 +34,11 @@
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxAddOrRemoveFields = new System.Windows.Forms.GroupBox();
+            this.btnPayeeDown = new System.Windows.Forms.Button();
+            this.btnPayeeUp = new System.Windows.Forms.Button();
+            this.btnPayeeRight = new System.Windows.Forms.Button();
+            this.btnPayeeLeft = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAmountDown = new System.Windows.Forms.Button();
             this.btnAmountUp = new System.Windows.Forms.Button();
@@ -93,11 +98,6 @@
             this.ppd = new System.Windows.Forms.PrintPreviewDialog();
             this.pdl = new System.Windows.Forms.PrintDialog();
             this.psd = new System.Windows.Forms.PageSetupDialog();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnPayeeDown = new System.Windows.Forms.Button();
-            this.btnPayeeUp = new System.Windows.Forms.Button();
-            this.btnPayeeRight = new System.Windows.Forms.Button();
-            this.btnPayeeLeft = new System.Windows.Forms.Button();
             this.pnlBody.SuspendLayout();
             this.gbxAddOrRemoveFields.SuspendLayout();
             this.pnlWorkSpace.SuspendLayout();
@@ -123,7 +123,7 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(938, 83);
+            this.pnlHeader.Size = new System.Drawing.Size(955, 62);
             this.pnlHeader.TabIndex = 9;
             // 
             // pnlBody
@@ -140,10 +140,10 @@
             this.pnlBody.Controls.Add(this.gbxOptions);
             this.pnlBody.Controls.Add(this.gbxChequeDetails);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(0, 83);
+            this.pnlBody.Location = new System.Drawing.Point(0, 62);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBody.Size = new System.Drawing.Size(938, 604);
+            this.pnlBody.Size = new System.Drawing.Size(955, 671);
             this.pnlBody.TabIndex = 10;
             // 
             // btnPrintPreview
@@ -155,7 +155,7 @@
             this.btnPrintPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintPreview.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.btnPrintPreview.ForeColor = System.Drawing.Color.White;
-            this.btnPrintPreview.Location = new System.Drawing.Point(10, 560);
+            this.btnPrintPreview.Location = new System.Drawing.Point(14, 610);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(94, 25);
@@ -174,7 +174,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(845, 559);
+            this.btnClose.Location = new System.Drawing.Point(849, 610);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 25);
@@ -207,10 +207,59 @@
             this.gbxAddOrRemoveFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxAddOrRemoveFields.Location = new System.Drawing.Point(16, 99);
             this.gbxAddOrRemoveFields.Name = "gbxAddOrRemoveFields";
-            this.gbxAddOrRemoveFields.Size = new System.Drawing.Size(908, 85);
+            this.gbxAddOrRemoveFields.Size = new System.Drawing.Size(908, 76);
             this.gbxAddOrRemoveFields.TabIndex = 4;
             this.gbxAddOrRemoveFields.TabStop = false;
             this.gbxAddOrRemoveFields.Text = "Adjust labels";
+            // 
+            // btnPayeeDown
+            // 
+            this.btnPayeeDown.Location = new System.Drawing.Point(485, 51);
+            this.btnPayeeDown.Name = "btnPayeeDown";
+            this.btnPayeeDown.Size = new System.Drawing.Size(20, 20);
+            this.btnPayeeDown.TabIndex = 26;
+            this.btnPayeeDown.Text = "˅";
+            this.btnPayeeDown.UseVisualStyleBackColor = true;
+            this.btnPayeeDown.Click += new System.EventHandler(this.btnPayeeDown_Click);
+            // 
+            // btnPayeeUp
+            // 
+            this.btnPayeeUp.Location = new System.Drawing.Point(485, 5);
+            this.btnPayeeUp.Name = "btnPayeeUp";
+            this.btnPayeeUp.Size = new System.Drawing.Size(20, 20);
+            this.btnPayeeUp.TabIndex = 25;
+            this.btnPayeeUp.Text = "˄";
+            this.btnPayeeUp.UseVisualStyleBackColor = true;
+            this.btnPayeeUp.Click += new System.EventHandler(this.btnPayeeUp_Click);
+            // 
+            // btnPayeeRight
+            // 
+            this.btnPayeeRight.Location = new System.Drawing.Point(503, 29);
+            this.btnPayeeRight.Name = "btnPayeeRight";
+            this.btnPayeeRight.Size = new System.Drawing.Size(20, 20);
+            this.btnPayeeRight.TabIndex = 24;
+            this.btnPayeeRight.Text = ">";
+            this.btnPayeeRight.UseVisualStyleBackColor = true;
+            this.btnPayeeRight.Click += new System.EventHandler(this.btnPayeeRight_Click);
+            // 
+            // btnPayeeLeft
+            // 
+            this.btnPayeeLeft.Location = new System.Drawing.Point(477, 29);
+            this.btnPayeeLeft.Name = "btnPayeeLeft";
+            this.btnPayeeLeft.Size = new System.Drawing.Size(20, 20);
+            this.btnPayeeLeft.TabIndex = 23;
+            this.btnPayeeLeft.Text = "<";
+            this.btnPayeeLeft.UseVisualStyleBackColor = true;
+            this.btnPayeeLeft.Click += new System.EventHandler(this.btnPayeeLeft_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(364, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Adjust Payee";
             // 
             // label2
             // 
@@ -223,9 +272,9 @@
             // 
             // btnAmountDown
             // 
-            this.btnAmountDown.Location = new System.Drawing.Point(306, 57);
+            this.btnAmountDown.Location = new System.Drawing.Point(308, 51);
             this.btnAmountDown.Name = "btnAmountDown";
-            this.btnAmountDown.Size = new System.Drawing.Size(30, 23);
+            this.btnAmountDown.Size = new System.Drawing.Size(20, 20);
             this.btnAmountDown.TabIndex = 20;
             this.btnAmountDown.Text = "˅";
             this.btnAmountDown.UseVisualStyleBackColor = true;
@@ -235,7 +284,7 @@
             // 
             this.btnAmountUp.Location = new System.Drawing.Point(308, 3);
             this.btnAmountUp.Name = "btnAmountUp";
-            this.btnAmountUp.Size = new System.Drawing.Size(30, 23);
+            this.btnAmountUp.Size = new System.Drawing.Size(20, 20);
             this.btnAmountUp.TabIndex = 19;
             this.btnAmountUp.Text = "˄";
             this.btnAmountUp.UseVisualStyleBackColor = true;
@@ -243,9 +292,9 @@
             // 
             // btnAmountRight
             // 
-            this.btnAmountRight.Location = new System.Drawing.Point(328, 31);
+            this.btnAmountRight.Location = new System.Drawing.Point(319, 25);
             this.btnAmountRight.Name = "btnAmountRight";
-            this.btnAmountRight.Size = new System.Drawing.Size(30, 23);
+            this.btnAmountRight.Size = new System.Drawing.Size(20, 20);
             this.btnAmountRight.TabIndex = 18;
             this.btnAmountRight.Text = ">";
             this.btnAmountRight.UseVisualStyleBackColor = true;
@@ -253,9 +302,9 @@
             // 
             // btnAmountLeft
             // 
-            this.btnAmountLeft.Location = new System.Drawing.Point(290, 31);
+            this.btnAmountLeft.Location = new System.Drawing.Point(293, 25);
             this.btnAmountLeft.Name = "btnAmountLeft";
-            this.btnAmountLeft.Size = new System.Drawing.Size(30, 23);
+            this.btnAmountLeft.Size = new System.Drawing.Size(20, 20);
             this.btnAmountLeft.TabIndex = 17;
             this.btnAmountLeft.Text = "<";
             this.btnAmountLeft.UseVisualStyleBackColor = true;
@@ -263,9 +312,9 @@
             // 
             // btnDateDown
             // 
-            this.btnDateDown.Location = new System.Drawing.Point(140, 54);
+            this.btnDateDown.Location = new System.Drawing.Point(140, 51);
             this.btnDateDown.Name = "btnDateDown";
-            this.btnDateDown.Size = new System.Drawing.Size(30, 23);
+            this.btnDateDown.Size = new System.Drawing.Size(20, 20);
             this.btnDateDown.TabIndex = 16;
             this.btnDateDown.Text = "˅";
             this.btnDateDown.UseVisualStyleBackColor = true;
@@ -275,7 +324,7 @@
             // 
             this.btnDateUp.Location = new System.Drawing.Point(140, 3);
             this.btnDateUp.Name = "btnDateUp";
-            this.btnDateUp.Size = new System.Drawing.Size(30, 23);
+            this.btnDateUp.Size = new System.Drawing.Size(20, 20);
             this.btnDateUp.TabIndex = 15;
             this.btnDateUp.Text = "˄";
             this.btnDateUp.UseVisualStyleBackColor = true;
@@ -283,9 +332,9 @@
             // 
             // btnDateRight
             // 
-            this.btnDateRight.Location = new System.Drawing.Point(161, 29);
+            this.btnDateRight.Location = new System.Drawing.Point(154, 25);
             this.btnDateRight.Name = "btnDateRight";
-            this.btnDateRight.Size = new System.Drawing.Size(30, 23);
+            this.btnDateRight.Size = new System.Drawing.Size(20, 20);
             this.btnDateRight.TabIndex = 14;
             this.btnDateRight.Text = ">";
             this.btnDateRight.UseVisualStyleBackColor = true;
@@ -293,9 +342,9 @@
             // 
             // btnDateLeft
             // 
-            this.btnDateLeft.Location = new System.Drawing.Point(123, 29);
+            this.btnDateLeft.Location = new System.Drawing.Point(128, 25);
             this.btnDateLeft.Name = "btnDateLeft";
-            this.btnDateLeft.Size = new System.Drawing.Size(30, 23);
+            this.btnDateLeft.Size = new System.Drawing.Size(20, 20);
             this.btnDateLeft.TabIndex = 13;
             this.btnDateLeft.Text = "<";
             this.btnDateLeft.UseVisualStyleBackColor = true;
@@ -322,9 +371,9 @@
             // 
             // btnNarrowSpace
             // 
-            this.btnNarrowSpace.Location = new System.Drawing.Point(809, 12);
+            this.btnNarrowSpace.Location = new System.Drawing.Point(826, 12);
             this.btnNarrowSpace.Name = "btnNarrowSpace";
-            this.btnNarrowSpace.Size = new System.Drawing.Size(32, 23);
+            this.btnNarrowSpace.Size = new System.Drawing.Size(20, 20);
             this.btnNarrowSpace.TabIndex = 10;
             this.btnNarrowSpace.Text = "<<";
             this.btnNarrowSpace.UseVisualStyleBackColor = true;
@@ -334,7 +383,7 @@
             // 
             this.btnIncreaseSpace.Location = new System.Drawing.Point(852, 12);
             this.btnIncreaseSpace.Name = "btnIncreaseSpace";
-            this.btnIncreaseSpace.Size = new System.Drawing.Size(32, 23);
+            this.btnIncreaseSpace.Size = new System.Drawing.Size(20, 20);
             this.btnIncreaseSpace.TabIndex = 9;
             this.btnIncreaseSpace.Text = ">>";
             this.btnIncreaseSpace.UseVisualStyleBackColor = true;
@@ -358,7 +407,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(765, 559);
+            this.btnPrint.Location = new System.Drawing.Point(769, 610);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 25);
@@ -376,7 +425,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(685, 559);
+            this.btnSave.Location = new System.Drawing.Point(689, 610);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 25);
@@ -391,9 +440,9 @@
             this.pnlWorkSpace.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pnlWorkSpace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlWorkSpace.Controls.Add(this.pnlCheque);
-            this.pnlWorkSpace.Location = new System.Drawing.Point(10, 190);
+            this.pnlWorkSpace.Location = new System.Drawing.Point(10, 180);
             this.pnlWorkSpace.Name = "pnlWorkSpace";
-            this.pnlWorkSpace.Size = new System.Drawing.Size(909, 366);
+            this.pnlWorkSpace.Size = new System.Drawing.Size(909, 425);
             this.pnlWorkSpace.TabIndex = 18;
             // 
             // pnlCheque
@@ -420,7 +469,7 @@
             this.pnlCheque.Controls.Add(this.lblPayeeLine1);
             this.pnlCheque.Location = new System.Drawing.Point(61, 4);
             this.pnlCheque.Name = "pnlCheque";
-            this.pnlCheque.Size = new System.Drawing.Size(736, 354);
+            this.pnlCheque.Size = new System.Drawing.Size(805, 398);
             this.pnlCheque.TabIndex = 0;
             // 
             // pbxBearerStrike
@@ -440,7 +489,7 @@
             this.pbxSignatoryStamp.AccessibleDescription = "Siganture Stamp";
             this.pbxSignatoryStamp.BackColor = System.Drawing.Color.Transparent;
             this.pbxSignatoryStamp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbxSignatoryStamp.Location = new System.Drawing.Point(360, 111);
+            this.pbxSignatoryStamp.Location = new System.Drawing.Point(324, 276);
             this.pbxSignatoryStamp.Name = "pbxSignatoryStamp";
             this.pbxSignatoryStamp.Size = new System.Drawing.Size(100, 49);
             this.pbxSignatoryStamp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -475,7 +524,7 @@
             this.pbxNotAbove.AccessibleDescription = "NotAbove";
             this.pbxNotAbove.BackColor = System.Drawing.Color.Transparent;
             this.pbxNotAbove.Image = ((System.Drawing.Image)(resources.GetObject("pbxNotAbove.Image")));
-            this.pbxNotAbove.Location = new System.Drawing.Point(40, 201);
+            this.pbxNotAbove.Location = new System.Drawing.Point(46, 225);
             this.pbxNotAbove.Name = "pbxNotAbove";
             this.pbxNotAbove.Size = new System.Drawing.Size(149, 28);
             this.pbxNotAbove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -534,9 +583,9 @@
             this.lblDate.AccessibleName = "Date";
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.lblDate.Location = new System.Drawing.Point(526, 72);
+            this.lblDate.Location = new System.Drawing.Point(577, 84);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(187, 20);
+            this.lblDate.Size = new System.Drawing.Size(195, 20);
             this.lblDate.TabIndex = 8;
             // 
             // lblAccountNo
@@ -554,9 +603,9 @@
             // 
             this.lblAmount.AccessibleName = "Amount in figure";
             this.lblAmount.BackColor = System.Drawing.Color.Transparent;
-            this.lblAmount.Location = new System.Drawing.Point(537, 187);
+            this.lblAmount.Location = new System.Drawing.Point(587, 211);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(176, 25);
+            this.lblAmount.Size = new System.Drawing.Size(192, 26);
             this.lblAmount.TabIndex = 5;
             // 
             // lblAmountInWords2
@@ -564,7 +613,7 @@
             this.lblAmountInWords2.AccessibleName = "Amount in words line 2";
             this.lblAmountInWords2.BackColor = System.Drawing.Color.Transparent;
             this.lblAmountInWords2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountInWords2.Location = new System.Drawing.Point(28, 176);
+            this.lblAmountInWords2.Location = new System.Drawing.Point(38, 196);
             this.lblAmountInWords2.Name = "lblAmountInWords2";
             this.lblAmountInWords2.Size = new System.Drawing.Size(474, 22);
             this.lblAmountInWords2.TabIndex = 4;
@@ -575,7 +624,7 @@
             this.lblAmountInWords1.AccessibleName = "Amount In Words";
             this.lblAmountInWords1.BackColor = System.Drawing.Color.Transparent;
             this.lblAmountInWords1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountInWords1.Location = new System.Drawing.Point(46, 150);
+            this.lblAmountInWords1.Location = new System.Drawing.Point(48, 169);
             this.lblAmountInWords1.Name = "lblAmountInWords1";
             this.lblAmountInWords1.Size = new System.Drawing.Size(615, 21);
             this.lblAmountInWords1.TabIndex = 3;
@@ -596,9 +645,9 @@
             this.lblPayeeLine1.AccessibleName = "Payee";
             this.lblPayeeLine1.BackColor = System.Drawing.Color.Transparent;
             this.lblPayeeLine1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayeeLine1.Location = new System.Drawing.Point(48, 122);
+            this.lblPayeeLine1.Location = new System.Drawing.Point(48, 142);
             this.lblPayeeLine1.Name = "lblPayeeLine1";
-            this.lblPayeeLine1.Size = new System.Drawing.Size(599, 18);
+            this.lblPayeeLine1.Size = new System.Drawing.Size(620, 20);
             this.lblPayeeLine1.TabIndex = 0;
             // 
             // gbxOptional
@@ -870,60 +919,11 @@
             // 
             this.pdl.UseEXDialog = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(364, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Adjust Payee";
-            // 
-            // btnPayeeDown
-            // 
-            this.btnPayeeDown.Location = new System.Drawing.Point(485, 56);
-            this.btnPayeeDown.Name = "btnPayeeDown";
-            this.btnPayeeDown.Size = new System.Drawing.Size(29, 23);
-            this.btnPayeeDown.TabIndex = 26;
-            this.btnPayeeDown.Text = "˅";
-            this.btnPayeeDown.UseVisualStyleBackColor = true;
-            this.btnPayeeDown.Click += new System.EventHandler(this.btnPayeeDown_Click);
-            // 
-            // btnPayeeUp
-            // 
-            this.btnPayeeUp.Location = new System.Drawing.Point(485, 5);
-            this.btnPayeeUp.Name = "btnPayeeUp";
-            this.btnPayeeUp.Size = new System.Drawing.Size(29, 23);
-            this.btnPayeeUp.TabIndex = 25;
-            this.btnPayeeUp.Text = "˄";
-            this.btnPayeeUp.UseVisualStyleBackColor = true;
-            this.btnPayeeUp.Click += new System.EventHandler(this.btnPayeeUp_Click);
-            // 
-            // btnPayeeRight
-            // 
-            this.btnPayeeRight.Location = new System.Drawing.Point(506, 31);
-            this.btnPayeeRight.Name = "btnPayeeRight";
-            this.btnPayeeRight.Size = new System.Drawing.Size(29, 23);
-            this.btnPayeeRight.TabIndex = 24;
-            this.btnPayeeRight.Text = ">";
-            this.btnPayeeRight.UseVisualStyleBackColor = true;
-            this.btnPayeeRight.Click += new System.EventHandler(this.btnPayeeRight_Click);
-            // 
-            // btnPayeeLeft
-            // 
-            this.btnPayeeLeft.Location = new System.Drawing.Point(468, 31);
-            this.btnPayeeLeft.Name = "btnPayeeLeft";
-            this.btnPayeeLeft.Size = new System.Drawing.Size(29, 23);
-            this.btnPayeeLeft.TabIndex = 23;
-            this.btnPayeeLeft.Text = "<";
-            this.btnPayeeLeft.UseVisualStyleBackColor = true;
-            this.btnPayeeLeft.Click += new System.EventHandler(this.btnPayeeLeft_Click);
-            // 
             // frmChequeEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 687);
+            this.ClientSize = new System.Drawing.Size(955, 733);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmChequeEntry";

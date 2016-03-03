@@ -36,3 +36,22 @@ C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled
 C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Add_printer.resources
 C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csprojResolveAssemblyReference.cache
 C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MovableControl.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe.config
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.exe
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.pdb
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.pdb
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Add_printer.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeDetailsHome.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeEntry.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeStatus.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmLogin.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMDI.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMdiHeader.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmSelectCheque.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MovableControl.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MyMessageBox.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Properties.Resources.resources
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csproj.GenerateResource.Cache
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.cache
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled

@@ -20,7 +20,7 @@ namespace AbayChequeMagic
 
         #region public variables
         System.Drawing.Printing.PrintDocument pdc = new System.Drawing.Printing.PrintDocument();
-        private int inHardMarginY = 0;
+        private int inHardMarginY = 10;
         private string strLeafId = string.Empty;
         private const int inPrintErrorFactor = 16;
         PaperSize psMatching = new PaperSize();
@@ -1652,28 +1652,35 @@ namespace AbayChequeMagic
                             {
                                 if (cntrl.Name == "pbxBearerStrike")
                                 {
-                                    g.DrawImage(((PictureBox)cntrl).Image, cntrl.Location.X + 7, cntrl.Location.Y - inHardMarginY, cntrl.Width, cntrl.Height);
+                                    g.DrawImage(((PictureBox)cntrl).Image, cntrl.Location.X , cntrl.Location.Y , cntrl.Width, cntrl.Height);
                                 }
                                 else if (((PictureBox)(cntrl)).Image != null)
                                 {
-                                    g.DrawImage(((PictureBox)cntrl).Image, cntrl.Location.X, cntrl.Location.Y - inHardMarginY, cntrl.Width, cntrl.Height);
+                                    g.DrawImage(((PictureBox)cntrl).Image, cntrl.Location.X, cntrl.Location.Y , cntrl.Width, cntrl.Height);
                                 }
                             }
                             else if (cntrl is Label)
                             {
                                 if (cntrl.Name == "lblDate")
                                 {
-                                    g.DrawString(cntrl.Text, new Font("Comic Sans MS", 7.25F, System.Drawing.FontStyle.Regular), brush, cntrl.Location.X + 10, cntrl.Location.Y - inHardMarginY);
+                                    g.DrawString(cntrl.Text, new Font("Comic Sans MS", 7.25F, System.Drawing.FontStyle.Regular), brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
                                 }
                                 else if (cntrl.Name == "lblAmount")
                                 {
-                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X + 7, cntrl.Location.Y - inHardMarginY);
+                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
                                 }
+                                else if (cntrl.Name == "lblPayeeLine1")
+                                {
+                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
+                                }
+                                else if (cntrl.Name == "lblAmountInWords1")
+                                {
+                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
+                                } 
                                 else
                                 {
-                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X, cntrl.Location.Y - inHardMarginY);
+                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X, cntrl.Location.Y);
                                 }
-
                             }
 
                         }
