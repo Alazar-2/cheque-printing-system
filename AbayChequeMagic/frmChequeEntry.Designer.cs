@@ -98,6 +98,9 @@
             this.ppd = new System.Windows.Forms.PrintPreviewDialog();
             this.pdl = new System.Windows.Forms.PrintDialog();
             this.psd = new System.Windows.Forms.PageSetupDialog();
+            this.rb300 = new System.Windows.Forms.RadioButton();
+            this.rb600 = new System.Windows.Forms.RadioButton();
+            this.rb900 = new System.Windows.Forms.RadioButton();
             this.pnlBody.SuspendLayout();
             this.gbxAddOrRemoveFields.SuspendLayout();
             this.pnlWorkSpace.SuspendLayout();
@@ -185,6 +188,9 @@
             // 
             // gbxAddOrRemoveFields
             // 
+            this.gbxAddOrRemoveFields.Controls.Add(this.rb900);
+            this.gbxAddOrRemoveFields.Controls.Add(this.rb600);
+            this.gbxAddOrRemoveFields.Controls.Add(this.rb300);
             this.gbxAddOrRemoveFields.Controls.Add(this.btnPayeeDown);
             this.gbxAddOrRemoveFields.Controls.Add(this.btnPayeeUp);
             this.gbxAddOrRemoveFields.Controls.Add(this.btnPayeeRight);
@@ -919,6 +925,39 @@
             // 
             this.pdl.UseEXDialog = true;
             // 
+            // rb300
+            // 
+            this.rb300.AutoSize = true;
+            this.rb300.Location = new System.Drawing.Point(619, 44);
+            this.rb300.Name = "rb300";
+            this.rb300.Size = new System.Drawing.Size(76, 20);
+            this.rb300.TabIndex = 27;
+            this.rb300.TabStop = true;
+            this.rb300.Text = "300 dpi";
+            this.rb300.UseVisualStyleBackColor = true;
+            // 
+            // rb600
+            // 
+            this.rb600.AutoSize = true;
+            this.rb600.Location = new System.Drawing.Point(701, 44);
+            this.rb600.Name = "rb600";
+            this.rb600.Size = new System.Drawing.Size(76, 20);
+            this.rb600.TabIndex = 28;
+            this.rb600.TabStop = true;
+            this.rb600.Text = "600 dpi";
+            this.rb600.UseVisualStyleBackColor = true;
+            // 
+            // rb900
+            // 
+            this.rb900.AutoSize = true;
+            this.rb900.Location = new System.Drawing.Point(785, 44);
+            this.rb900.Name = "rb900";
+            this.rb900.Size = new System.Drawing.Size(76, 20);
+            this.rb900.TabIndex = 29;
+            this.rb900.TabStop = true;
+            this.rb900.Text = "900 dpi";
+            this.rb900.UseVisualStyleBackColor = true;
+            // 
             // frmChequeEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1024,5 +1063,8 @@
         private System.Windows.Forms.Button btnPayeeUp;
         private System.Windows.Forms.Button btnPayeeRight;
         private System.Windows.Forms.Button btnPayeeLeft;
+        private System.Windows.Forms.RadioButton rb900;
+        private System.Windows.Forms.RadioButton rb600;
+        private System.Windows.Forms.RadioButton rb300;
     }
 }
