@@ -48,7 +48,7 @@
             this.gbxAddPrinter.Controls.Add(this.lbxcChoosenPrinter);
             this.gbxAddPrinter.Controls.Add(this.btnAdd);
             this.gbxAddPrinter.Controls.Add(this.btnRemove);
-            this.gbxAddPrinter.Location = new System.Drawing.Point(141, 101);
+            this.gbxAddPrinter.Location = new System.Drawing.Point(51, 97);
             this.gbxAddPrinter.Name = "gbxAddPrinter";
             this.gbxAddPrinter.Size = new System.Drawing.Size(506, 235);
             this.gbxAddPrinter.TabIndex = 1;
