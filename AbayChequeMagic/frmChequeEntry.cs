@@ -943,6 +943,12 @@ namespace AbayChequeMagic
         #region events
         private void frmChequeEntry_Load(object sender, EventArgs e)
         {
+            //PrinterResolution pkResolution;
+            //pkResolution = pd.DefaultPageSettings.PrinterResolution;
+            //MessageBox.Show(pkResolution.ToString());
+            //int cnt = pd.PrinterSettings.PrinterResolutions.Count;
+            //MessageBox.Show(cnt.ToString());
+            rb600.Checked = true;
             try
             {
                 pdc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(pdc_PrintPage);
@@ -1639,7 +1645,27 @@ namespace AbayChequeMagic
 
         private void pd_PrintPage(object sender, PrintPageEventArgs e)
         {
-            try
+            if(rb300.Checked)
+            {
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.X = 300;
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.Y = 300;
+            }
+            else if(rb600.Checked)
+            {
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.X = 600;
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.Y = 600;
+            }
+            else if(rb900.Checked)
+            {
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.X = 900;
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.Y = 900;
+            }
+            else
+            {
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.X = 600;
+                pd.PrinterSettings.DefaultPageSettings.PrinterResolution.Y = 600;
+            }
+             try
             {
                 using (Graphics g = e.Graphics)
                 {

@@ -36,7 +36,11 @@
             this.lbxcChoosenPrinter = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbxResolution = new System.Windows.Forms.ListBox();
+            this.btnResolution = new System.Windows.Forms.Button();
             this.gbxAddPrinter.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxAddPrinter
@@ -48,7 +52,7 @@
             this.gbxAddPrinter.Controls.Add(this.lbxcChoosenPrinter);
             this.gbxAddPrinter.Controls.Add(this.btnAdd);
             this.gbxAddPrinter.Controls.Add(this.btnRemove);
-            this.gbxAddPrinter.Location = new System.Drawing.Point(51, 97);
+            this.gbxAddPrinter.Location = new System.Drawing.Point(21, 86);
             this.gbxAddPrinter.Name = "gbxAddPrinter";
             this.gbxAddPrinter.Size = new System.Drawing.Size(506, 235);
             this.gbxAddPrinter.TabIndex = 1;
@@ -139,17 +143,53 @@
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnResolution);
+            this.groupBox1.Controls.Add(this.lbxResolution);
+            this.groupBox1.Location = new System.Drawing.Point(550, 91);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 212);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Printer Resolution";
+            // 
+            // lbxResolution
+            // 
+            this.lbxResolution.FormattingEnabled = true;
+            this.lbxResolution.Items.AddRange(new object[] {
+            "300 dpi",
+            "600 dpi",
+            "900 dpi",
+            "1200 dpi"});
+            this.lbxResolution.Location = new System.Drawing.Point(26, 45);
+            this.lbxResolution.Name = "lbxResolution";
+            this.lbxResolution.Size = new System.Drawing.Size(120, 95);
+            this.lbxResolution.TabIndex = 0;
+            // 
+            // btnResolution
+            // 
+            this.btnResolution.Location = new System.Drawing.Point(26, 155);
+            this.btnResolution.Name = "btnResolution";
+            this.btnResolution.Size = new System.Drawing.Size(101, 23);
+            this.btnResolution.TabIndex = 1;
+            this.btnResolution.Text = "Set Resolution";
+            this.btnResolution.UseVisualStyleBackColor = true;
+            this.btnResolution.Click += new System.EventHandler(this.btnResolution_Click);
+            // 
             // Add_printer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 437);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxAddPrinter);
             this.Name = "Add_printer";
             this.Text = "Add_printer";
             this.Load += new System.EventHandler(this.Add_printer_Load);
             this.gbxAddPrinter.ResumeLayout(false);
             this.gbxAddPrinter.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -164,5 +204,8 @@
         private System.Windows.Forms.ListBox lbxcChoosenPrinter;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox lbxResolution;
+        private System.Windows.Forms.Button btnResolution;
     }
 }
