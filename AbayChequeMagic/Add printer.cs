@@ -33,7 +33,9 @@ namespace AbayChequeMagic
                 var yResoltion = printer.GetPropertyValue("VerticalResolution");
                 //Console.WriteLine("{0} (Status: {1}, Default: {2}, Network: {3}",
                 //            name, status, isDefault, isNetworkPrinter);
+
               //  MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " ntked? " + isNetworkPrinter +" X-or: "+xResoltion+ "Y-or"+yResoltion);
+ 
             }
             try
             {
