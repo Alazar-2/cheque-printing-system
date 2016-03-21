@@ -168,6 +168,12 @@
     <Compile Include="frmSelectCheque.Designer.cs">
       <DependentUpon>frmSelectCheque.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstallPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallPrinter.Designer.cs">
+      <DependentUpon>InstallPrinter.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovableControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,18 @@
     </Compile>
     <Compile Include="MyMessageBox.Designer.cs">
       <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterIPAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterIPAddress.Designer.cs">
+      <DependentUpon>PrinterIPAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterList.Designer.cs">
+      <DependentUpon>PrinterList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -207,11 +225,20 @@
     <EmbeddedResource Include="frmSelectCheque.resx">
       <DependentUpon>frmSelectCheque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstallPrinter.resx">
+      <DependentUpon>InstallPrinter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MovableControl.resx">
       <DependentUpon>MovableControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyMessageBox.resx">
       <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterIPAddress.resx">
+      <DependentUpon>PrinterIPAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterList.resx">
+      <DependentUpon>PrinterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

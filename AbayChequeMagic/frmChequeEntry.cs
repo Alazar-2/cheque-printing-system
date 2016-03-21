@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace AbayChequeMagic
@@ -1190,6 +1191,7 @@ namespace AbayChequeMagic
         {
             try
             {
+                
                 SetAmountInWords();
                 if (txtAmount.Text.Trim() != string.Empty)
                 {
@@ -1215,7 +1217,7 @@ namespace AbayChequeMagic
             }
             catch (FormatException ex)
             {
-                //Messages.ExceptionMessage(ex.Message);
+                Messages.ExceptionMessage(ex.Message);
 
             }
             catch (Exception ex)
@@ -1827,6 +1829,67 @@ namespace AbayChequeMagic
             xVal = xVal + 1;
             temp = new Point(xVal, yVal);
             lblPayeeLine1.Location = temp;
+        }
+
+        private void btnInstallPrinter_Click(object sender, EventArgs e)
+        {
+            string printer = "rundll32 printui.dll,PrintUIEntry /ip";
+            string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.Start();
+        }
+        private void installPrinter2()
+        {
+            string src = "http://www.tech-recipes.com/rx/45529/install-network-printers-via-batch-file-or-command-line-in-windows-78-and-server-2008/";
+         string line1=   "cscript %WINDIR%\\System32\\Printing_Admin_Scripts\\en-US\\Prnport.vbs -a -r IP_192.168.1.200 -h 192.168.1.200 -o raw -n 9100";
+      //  string line2= "rundll32 printui.dll,PrintUIEntry /ia /m "HP Universal Printing PCL 6" /f "C:\printers\HPUPD\PCL\hpcu118c.inf"";
+      //  string line3="rundll32 printui.dll,PrintUIEntry /if /b “HP PRINTER1” /f "C:\printers\HPUPD\PCL\hpcu118c.inf" /r "IP_192.168.1.200” /m "HP Universal Printing PCL 6";
+          System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter2";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter2";
+            proc.Start();
+        }
+        private void installPrinter3()
+        {
+            string methd = "using System Center Configuration Manager(SCCM).";
+            string methdDetail = "enable windows to use Print Server.and use Print Managment settings";
+        }
+        private void installPrinter4()
+        {
+            string ipAddress = "10.1.90.6";
+            try
+            {
+                ProcessStartInfo info = new ProcessStartInfo();
+                info.FileName = "cscript";
+                info.Arguments = @"c:\Windows\System32\Printing_Admin_Scripts\en-US\prnport.vbs -a -r IP_" + ipAddress + " -h " + ipAddress + " -o raw";
+                info.UseShellExecute = false;
+                Process.Start(info);
+
+                //Install the printer
+                string _systemRoot = Environment.GetEnvironmentVariable("SYSTEMROOT");
+                string _system32 = Environment.GetEnvironmentVariable("SYSTEMROOT") + @"/System32";
+                info.WorkingDirectory = _system32;
+                info.FileName = _system32 + @"/RUNDLL32";
+                info.Arguments = "printui.dll, PrintUIEntry /if /b \"Test Printer\" /f " + _systemRoot + "\\INF\\prncacl1.inf /r \"IP_10.1.90.6\" /m \"Canon iR 2570C EUR\"";
+                info.UseShellExecute = false;
+                Process.Start(info);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void installPrinter5()
+        {
+            string url = "https://community.spiceworks.com/how_to/71708-how-to-install-printer-driver-and-add-a-network-printer-from-the-command-line";
+        }
+
+
+        private void btnAddPrinter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

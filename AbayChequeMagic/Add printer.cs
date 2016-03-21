@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Management;
+using System.Net;
 
 namespace AbayChequeMagic
 {
@@ -25,17 +26,28 @@ namespace AbayChequeMagic
             var printerQuery = new ManagementObjectSearcher("SELECT * from Win32_Printer");
             foreach (var printer in printerQuery.Get())
             {
-                var name = printer.GetPropertyValue("Name");
-                var status = printer.GetPropertyValue("Status");
-                var isDefault = printer.GetPropertyValue("Default");
-                var isNetworkPrinter = printer.GetPropertyValue("Network");
-                var xResoltion = printer.GetPropertyValue("horizontalResolution");
-                var yResoltion = printer.GetPropertyValue("VerticalResolution");
-                //Console.WriteLine("{0} (Status: {1}, Default: {2}, Network: {3}",
-                //            name, status, isDefault, isNetworkPrinter);
+                try
+                {
+                    var name = printer.GetPropertyValue("Name");
+                    var status = printer.GetPropertyValue("Status");
+                    var isDefault = printer.GetPropertyValue("Default");
+                    //var ipAddress = printer.GetPropertyValue("PortNumber");
+                    var isNetworkPrinter = printer.GetPropertyValue("Network");
+                    var xResoltion = printer.GetPropertyValue("horizontalResolution");
+                    var yResoltion = printer.GetPropertyValue("VerticalResolution");
+                    //Console.WriteLine("{0} (Status: {1}, Default: {2}, Network: {3}",
+                    //            name, status, isDefault, isNetworkPrinter);
+                 //   var portName = printer.GetPropertyValue("IpAddress");
+                    //IPHostEntry hostInfo = Dns.GetHostByName("MachineName");
+                    //MessageBox.Show(hostInfo.ToString());
+                  ///  string strIPAdress = hostInfo.Addre­ssList[0].ToString(); 
 
-              //  MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " ntked? " + isNetworkPrinter +" X-or: "+xResoltion+ "Y-or"+yResoltion);
- 
+                   // MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " ntked? " + " portName " + portName);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             try
             {
@@ -53,6 +65,33 @@ namespace AbayChequeMagic
             {
                 Messages.ExceptionMessage(ex.Message);
             }
+        }
+        private void PrinterIpAddress()
+        {
+             var scope = new ManagementScope(@"\root\cimv2");
+            scope.Connect();
+
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Printer");
+            var results = searcher.Get();
+            Console.WriteLine("Network printers list:");
+            foreach (var printer in results)
+            {
+                var portName = printer.Properties["PortName"].Value;
+
+                var searcher2 = new ManagementObjectSearcher("SELECT * FROM Win32_TCPIPPrinterPort where Name LIKE '" + portName + "'");
+                var results2 = searcher2.Get();
+                foreach (var printer2 in results2)
+                {
+                    Console.WriteLine("Name:" + printer.Properties["Name"].Value);
+                    //Console.WriteLine("PortName:" + portName);
+                    Console.WriteLine("PortNumber:" + printer2.Properties["PortNumber"].Value);
+                    Console.WriteLine("HostAddress:" + printer2.Properties["HostAddress"].Value);
+                }
+                Console.WriteLine();
+            }
+
+            Console.ReadLine();
+           
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

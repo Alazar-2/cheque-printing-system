@@ -1,0 +1,6 @@
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\bin\Debug\DataAccessCheque.dll
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\bin\Debug\DataAccessCheque.pdb
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\bin\Debug\MySql.Data.dll
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\obj\Debug\DataAccessCheque.csprojResolveAssemblyReference.cache
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\obj\Debug\DataAccessCheque.dll
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\obj\Debug\DataAccessCheque.pdb

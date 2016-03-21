@@ -34,6 +34,11 @@
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxAddOrRemoveFields = new System.Windows.Forms.GroupBox();
+            this.btnAddPrinter = new System.Windows.Forms.Button();
+            this.btnInstallPrinter = new System.Windows.Forms.Button();
+            this.rb900 = new System.Windows.Forms.RadioButton();
+            this.rb600 = new System.Windows.Forms.RadioButton();
+            this.rb300 = new System.Windows.Forms.RadioButton();
             this.btnPayeeDown = new System.Windows.Forms.Button();
             this.btnPayeeUp = new System.Windows.Forms.Button();
             this.btnPayeeRight = new System.Windows.Forms.Button();
@@ -98,9 +103,6 @@
             this.ppd = new System.Windows.Forms.PrintPreviewDialog();
             this.pdl = new System.Windows.Forms.PrintDialog();
             this.psd = new System.Windows.Forms.PageSetupDialog();
-            this.rb300 = new System.Windows.Forms.RadioButton();
-            this.rb600 = new System.Windows.Forms.RadioButton();
-            this.rb900 = new System.Windows.Forms.RadioButton();
             this.pnlBody.SuspendLayout();
             this.gbxAddOrRemoveFields.SuspendLayout();
             this.pnlWorkSpace.SuspendLayout();
@@ -126,7 +128,7 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(955, 62);
+            this.pnlHeader.Size = new System.Drawing.Size(1013, 62);
             this.pnlHeader.TabIndex = 9;
             // 
             // pnlBody
@@ -146,7 +148,7 @@
             this.pnlBody.Location = new System.Drawing.Point(0, 62);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBody.Size = new System.Drawing.Size(955, 671);
+            this.pnlBody.Size = new System.Drawing.Size(1013, 671);
             this.pnlBody.TabIndex = 10;
             // 
             // btnPrintPreview
@@ -188,6 +190,8 @@
             // 
             // gbxAddOrRemoveFields
             // 
+            this.gbxAddOrRemoveFields.Controls.Add(this.btnAddPrinter);
+            this.gbxAddOrRemoveFields.Controls.Add(this.btnInstallPrinter);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb900);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb600);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb300);
@@ -213,10 +217,64 @@
             this.gbxAddOrRemoveFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxAddOrRemoveFields.Location = new System.Drawing.Point(16, 99);
             this.gbxAddOrRemoveFields.Name = "gbxAddOrRemoveFields";
-            this.gbxAddOrRemoveFields.Size = new System.Drawing.Size(908, 76);
+            this.gbxAddOrRemoveFields.Size = new System.Drawing.Size(984, 76);
             this.gbxAddOrRemoveFields.TabIndex = 4;
             this.gbxAddOrRemoveFields.TabStop = false;
             this.gbxAddOrRemoveFields.Text = "Adjust labels";
+            // 
+            // btnAddPrinter
+            // 
+            this.btnAddPrinter.Location = new System.Drawing.Point(867, 39);
+            this.btnAddPrinter.Name = "btnAddPrinter";
+            this.btnAddPrinter.Size = new System.Drawing.Size(95, 25);
+            this.btnAddPrinter.TabIndex = 31;
+            this.btnAddPrinter.Text = "Add Printer";
+            this.btnAddPrinter.UseVisualStyleBackColor = true;
+            this.btnAddPrinter.Visible = false;
+            this.btnAddPrinter.Click += new System.EventHandler(this.btnAddPrinter_Click);
+            // 
+            // btnInstallPrinter
+            // 
+            this.btnInstallPrinter.Location = new System.Drawing.Point(518, 50);
+            this.btnInstallPrinter.Name = "btnInstallPrinter";
+            this.btnInstallPrinter.Size = new System.Drawing.Size(95, 25);
+            this.btnInstallPrinter.TabIndex = 30;
+            this.btnInstallPrinter.Text = "Install Printer";
+            this.btnInstallPrinter.UseVisualStyleBackColor = true;
+            this.btnInstallPrinter.Click += new System.EventHandler(this.btnInstallPrinter_Click);
+            // 
+            // rb900
+            // 
+            this.rb900.AutoSize = true;
+            this.rb900.Location = new System.Drawing.Point(785, 44);
+            this.rb900.Name = "rb900";
+            this.rb900.Size = new System.Drawing.Size(76, 20);
+            this.rb900.TabIndex = 29;
+            this.rb900.TabStop = true;
+            this.rb900.Text = "900 dpi";
+            this.rb900.UseVisualStyleBackColor = true;
+            // 
+            // rb600
+            // 
+            this.rb600.AutoSize = true;
+            this.rb600.Location = new System.Drawing.Point(701, 44);
+            this.rb600.Name = "rb600";
+            this.rb600.Size = new System.Drawing.Size(76, 20);
+            this.rb600.TabIndex = 28;
+            this.rb600.TabStop = true;
+            this.rb600.Text = "600 dpi";
+            this.rb600.UseVisualStyleBackColor = true;
+            // 
+            // rb300
+            // 
+            this.rb300.AutoSize = true;
+            this.rb300.Location = new System.Drawing.Point(619, 44);
+            this.rb300.Name = "rb300";
+            this.rb300.Size = new System.Drawing.Size(76, 20);
+            this.rb300.TabIndex = 27;
+            this.rb300.TabStop = true;
+            this.rb300.Text = "300 dpi";
+            this.rb300.UseVisualStyleBackColor = true;
             // 
             // btnPayeeDown
             // 
@@ -632,7 +690,7 @@
             this.lblAmountInWords1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmountInWords1.Location = new System.Drawing.Point(48, 169);
             this.lblAmountInWords1.Name = "lblAmountInWords1";
-            this.lblAmountInWords1.Size = new System.Drawing.Size(615, 21);
+            this.lblAmountInWords1.Size = new System.Drawing.Size(534, 21);
             this.lblAmountInWords1.TabIndex = 3;
             // 
             // lblPayeeLine2
@@ -666,6 +724,7 @@
             this.gbxOptional.TabIndex = 3;
             this.gbxOptional.TabStop = false;
             this.gbxOptional.Text = "Optional";
+            this.gbxOptional.Visible = false;
             // 
             // cbxPrintCoveringLetter
             // 
@@ -697,6 +756,7 @@
             this.gbxCrossing.TabIndex = 1;
             this.gbxCrossing.TabStop = false;
             this.gbxCrossing.Text = "Crossing";
+            this.gbxCrossing.Visible = false;
             // 
             // cbxNotNegotiable
             // 
@@ -731,6 +791,7 @@
             this.gbxOptions.TabIndex = 2;
             this.gbxOptions.TabStop = false;
             this.gbxOptions.Text = "Options";
+            this.gbxOptions.Visible = false;
             // 
             // cbxNotAbove
             // 
@@ -779,7 +840,7 @@
             this.gbxChequeDetails.Controls.Add(this.txtAmount);
             this.gbxChequeDetails.Location = new System.Drawing.Point(16, -1);
             this.gbxChequeDetails.Name = "gbxChequeDetails";
-            this.gbxChequeDetails.Size = new System.Drawing.Size(910, 65);
+            this.gbxChequeDetails.Size = new System.Drawing.Size(984, 65);
             this.gbxChequeDetails.TabIndex = 0;
             this.gbxChequeDetails.TabStop = false;
             this.gbxChequeDetails.Text = "Cheque Details";
@@ -925,44 +986,11 @@
             // 
             this.pdl.UseEXDialog = true;
             // 
-            // rb300
-            // 
-            this.rb300.AutoSize = true;
-            this.rb300.Location = new System.Drawing.Point(619, 44);
-            this.rb300.Name = "rb300";
-            this.rb300.Size = new System.Drawing.Size(76, 20);
-            this.rb300.TabIndex = 27;
-            this.rb300.TabStop = true;
-            this.rb300.Text = "300 dpi";
-            this.rb300.UseVisualStyleBackColor = true;
-            // 
-            // rb600
-            // 
-            this.rb600.AutoSize = true;
-            this.rb600.Location = new System.Drawing.Point(701, 44);
-            this.rb600.Name = "rb600";
-            this.rb600.Size = new System.Drawing.Size(76, 20);
-            this.rb600.TabIndex = 28;
-            this.rb600.TabStop = true;
-            this.rb600.Text = "600 dpi";
-            this.rb600.UseVisualStyleBackColor = true;
-            // 
-            // rb900
-            // 
-            this.rb900.AutoSize = true;
-            this.rb900.Location = new System.Drawing.Point(785, 44);
-            this.rb900.Name = "rb900";
-            this.rb900.Size = new System.Drawing.Size(76, 20);
-            this.rb900.TabIndex = 29;
-            this.rb900.TabStop = true;
-            this.rb900.Text = "900 dpi";
-            this.rb900.UseVisualStyleBackColor = true;
-            // 
             // frmChequeEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 733);
+            this.ClientSize = new System.Drawing.Size(1013, 733);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmChequeEntry";
@@ -1066,5 +1094,7 @@
         private System.Windows.Forms.RadioButton rb900;
         private System.Windows.Forms.RadioButton rb600;
         private System.Windows.Forms.RadioButton rb300;
+        private System.Windows.Forms.Button btnInstallPrinter;
+        private System.Windows.Forms.Button btnAddPrinter;
     }
 }
