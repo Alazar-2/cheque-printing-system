@@ -168,6 +168,12 @@
     <Compile Include="frmSelectCheque.Designer.cs">
       <DependentUpon>frmSelectCheque.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstallPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallPrinter.Designer.cs">
+      <DependentUpon>InstallPrinter.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovableControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectCheque.resx">
       <DependentUpon>frmSelectCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallPrinter.resx">
+      <DependentUpon>InstallPrinter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovableControl.resx">
       <DependentUpon>MovableControl.cs</DependentUpon>

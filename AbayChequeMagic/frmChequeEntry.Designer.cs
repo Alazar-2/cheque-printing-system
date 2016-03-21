@@ -34,6 +34,10 @@
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxAddOrRemoveFields = new System.Windows.Forms.GroupBox();
+            this.btnInstallPrinter = new System.Windows.Forms.Button();
+            this.rb900 = new System.Windows.Forms.RadioButton();
+            this.rb600 = new System.Windows.Forms.RadioButton();
+            this.rb300 = new System.Windows.Forms.RadioButton();
             this.btnPayeeDown = new System.Windows.Forms.Button();
             this.btnPayeeUp = new System.Windows.Forms.Button();
             this.btnPayeeRight = new System.Windows.Forms.Button();
@@ -98,9 +102,6 @@
             this.ppd = new System.Windows.Forms.PrintPreviewDialog();
             this.pdl = new System.Windows.Forms.PrintDialog();
             this.psd = new System.Windows.Forms.PageSetupDialog();
-            this.rb300 = new System.Windows.Forms.RadioButton();
-            this.rb600 = new System.Windows.Forms.RadioButton();
-            this.rb900 = new System.Windows.Forms.RadioButton();
             this.pnlBody.SuspendLayout();
             this.gbxAddOrRemoveFields.SuspendLayout();
             this.pnlWorkSpace.SuspendLayout();
@@ -188,6 +189,7 @@
             // 
             // gbxAddOrRemoveFields
             // 
+            this.gbxAddOrRemoveFields.Controls.Add(this.btnInstallPrinter);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb900);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb600);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb300);
@@ -217,6 +219,49 @@
             this.gbxAddOrRemoveFields.TabIndex = 4;
             this.gbxAddOrRemoveFields.TabStop = false;
             this.gbxAddOrRemoveFields.Text = "Adjust labels";
+            // 
+            // btnInstallPrinter
+            // 
+            this.btnInstallPrinter.Location = new System.Drawing.Point(518, 50);
+            this.btnInstallPrinter.Name = "btnInstallPrinter";
+            this.btnInstallPrinter.Size = new System.Drawing.Size(95, 25);
+            this.btnInstallPrinter.TabIndex = 30;
+            this.btnInstallPrinter.Text = "Install Printer";
+            this.btnInstallPrinter.UseVisualStyleBackColor = true;
+            this.btnInstallPrinter.Click += new System.EventHandler(this.btnInstallPrinter_Click);
+            // 
+            // rb900
+            // 
+            this.rb900.AutoSize = true;
+            this.rb900.Location = new System.Drawing.Point(785, 44);
+            this.rb900.Name = "rb900";
+            this.rb900.Size = new System.Drawing.Size(76, 20);
+            this.rb900.TabIndex = 29;
+            this.rb900.TabStop = true;
+            this.rb900.Text = "900 dpi";
+            this.rb900.UseVisualStyleBackColor = true;
+            // 
+            // rb600
+            // 
+            this.rb600.AutoSize = true;
+            this.rb600.Location = new System.Drawing.Point(701, 44);
+            this.rb600.Name = "rb600";
+            this.rb600.Size = new System.Drawing.Size(76, 20);
+            this.rb600.TabIndex = 28;
+            this.rb600.TabStop = true;
+            this.rb600.Text = "600 dpi";
+            this.rb600.UseVisualStyleBackColor = true;
+            // 
+            // rb300
+            // 
+            this.rb300.AutoSize = true;
+            this.rb300.Location = new System.Drawing.Point(619, 44);
+            this.rb300.Name = "rb300";
+            this.rb300.Size = new System.Drawing.Size(76, 20);
+            this.rb300.TabIndex = 27;
+            this.rb300.TabStop = true;
+            this.rb300.Text = "300 dpi";
+            this.rb300.UseVisualStyleBackColor = true;
             // 
             // btnPayeeDown
             // 
@@ -632,7 +677,7 @@
             this.lblAmountInWords1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmountInWords1.Location = new System.Drawing.Point(48, 169);
             this.lblAmountInWords1.Name = "lblAmountInWords1";
-            this.lblAmountInWords1.Size = new System.Drawing.Size(615, 21);
+            this.lblAmountInWords1.Size = new System.Drawing.Size(534, 21);
             this.lblAmountInWords1.TabIndex = 3;
             // 
             // lblPayeeLine2
@@ -925,39 +970,6 @@
             // 
             this.pdl.UseEXDialog = true;
             // 
-            // rb300
-            // 
-            this.rb300.AutoSize = true;
-            this.rb300.Location = new System.Drawing.Point(619, 44);
-            this.rb300.Name = "rb300";
-            this.rb300.Size = new System.Drawing.Size(76, 20);
-            this.rb300.TabIndex = 27;
-            this.rb300.TabStop = true;
-            this.rb300.Text = "300 dpi";
-            this.rb300.UseVisualStyleBackColor = true;
-            // 
-            // rb600
-            // 
-            this.rb600.AutoSize = true;
-            this.rb600.Location = new System.Drawing.Point(701, 44);
-            this.rb600.Name = "rb600";
-            this.rb600.Size = new System.Drawing.Size(76, 20);
-            this.rb600.TabIndex = 28;
-            this.rb600.TabStop = true;
-            this.rb600.Text = "600 dpi";
-            this.rb600.UseVisualStyleBackColor = true;
-            // 
-            // rb900
-            // 
-            this.rb900.AutoSize = true;
-            this.rb900.Location = new System.Drawing.Point(785, 44);
-            this.rb900.Name = "rb900";
-            this.rb900.Size = new System.Drawing.Size(76, 20);
-            this.rb900.TabIndex = 29;
-            this.rb900.TabStop = true;
-            this.rb900.Text = "900 dpi";
-            this.rb900.UseVisualStyleBackColor = true;
-            // 
             // frmChequeEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1066,5 +1078,6 @@
         private System.Windows.Forms.RadioButton rb900;
         private System.Windows.Forms.RadioButton rb600;
         private System.Windows.Forms.RadioButton rb300;
+        private System.Windows.Forms.Button btnInstallPrinter;
     }
 }

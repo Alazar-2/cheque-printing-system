@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace AbayChequeMagic
@@ -1215,7 +1216,7 @@ namespace AbayChequeMagic
             }
             catch (FormatException ex)
             {
-                //Messages.ExceptionMessage(ex.Message);
+                Messages.ExceptionMessage(ex.Message);
 
             }
             catch (Exception ex)
@@ -1827,6 +1828,16 @@ namespace AbayChequeMagic
             xVal = xVal + 1;
             temp = new Point(xVal, yVal);
             lblPayeeLine1.Location = temp;
+        }
+
+        private void btnInstallPrinter_Click(object sender, EventArgs e)
+        {
+            string printer = "rundll32 printui.dll,PrintUIEntry /ip";
+            string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.Start();
         }
     }
 }

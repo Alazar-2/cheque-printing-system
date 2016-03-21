@@ -55,3 +55,4 @@ C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayC
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csproj.GenerateResource.Cache
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.cache
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled
+C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.InstallPrinter.resources
