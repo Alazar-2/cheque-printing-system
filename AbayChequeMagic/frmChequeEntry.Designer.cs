@@ -34,7 +34,9 @@
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxAddOrRemoveFields = new System.Windows.Forms.GroupBox();
+
             this.btnAddPrinter = new System.Windows.Forms.Button();
+
             this.btnInstallPrinter = new System.Windows.Forms.Button();
             this.rb900 = new System.Windows.Forms.RadioButton();
             this.rb600 = new System.Windows.Forms.RadioButton();
@@ -190,7 +192,9 @@
             // 
             // gbxAddOrRemoveFields
             // 
+
             this.gbxAddOrRemoveFields.Controls.Add(this.btnAddPrinter);
+
             this.gbxAddOrRemoveFields.Controls.Add(this.btnInstallPrinter);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb900);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb600);
@@ -222,6 +226,7 @@
             this.gbxAddOrRemoveFields.TabStop = false;
             this.gbxAddOrRemoveFields.Text = "Adjust labels";
             // 
+
             // btnAddPrinter
             // 
             this.btnAddPrinter.Location = new System.Drawing.Point(867, 39);
@@ -233,6 +238,7 @@
             this.btnAddPrinter.Visible = false;
             this.btnAddPrinter.Click += new System.EventHandler(this.btnAddPrinter_Click);
             // 
+
             // btnInstallPrinter
             // 
             this.btnInstallPrinter.Location = new System.Drawing.Point(518, 50);

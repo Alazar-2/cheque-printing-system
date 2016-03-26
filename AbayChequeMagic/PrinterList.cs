@@ -16,5 +16,10 @@ namespace AbayChequeMagic
         {
             InitializeComponent();
         }
+
+        private void PrinterList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

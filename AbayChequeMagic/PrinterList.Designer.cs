@@ -114,6 +114,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "PrinterList";
             this.Text = "PrinterList";
+            this.Load += new System.EventHandler(this.PrinterList_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

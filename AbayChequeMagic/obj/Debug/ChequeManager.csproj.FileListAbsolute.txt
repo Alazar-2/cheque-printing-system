@@ -56,6 +56,9 @@ C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\Chequ
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.cache
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.InstallPrinter.resources
+<<<<<<< HEAD
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.PrinterList.resources
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csprojResolveAssemblyReference.cache
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.PrinterIPAddress.resources
+=======
+>>>>>>> e09e754058fdfec2750cc34687d917d90bcd4fe2
