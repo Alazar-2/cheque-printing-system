@@ -1,1 +1,0 @@
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe.config

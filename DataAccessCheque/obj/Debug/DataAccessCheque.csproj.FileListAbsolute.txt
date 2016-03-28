@@ -4,3 +4,11 @@ C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\bin\Debug\MySq
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\obj\Debug\DataAccessCheque.csprojResolveAssemblyReference.cache
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\obj\Debug\DataAccessCheque.dll
 C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\DataAccessCheque\obj\Debug\DataAccessCheque.pdb
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\bin\Debug\DataAccessCheque.dll
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\bin\Debug\DataAccessCheque.pdb
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\bin\Debug\MySql.Data.dll
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\obj\Debug\DataAccessCheque.csprojResolveAssemblyReference.cache
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\obj\Debug\DataAccessCheque.dll
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\DataAccessCheque\obj\Debug\DataAccessCheque.pdb

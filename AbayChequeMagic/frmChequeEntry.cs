@@ -262,11 +262,12 @@ namespace AbayChequeMagic
                 int inRightPart;
                 if ((inLeftPart = int.Parse(strAmount[0].Replace(",", ""))) > 0)
                 {
-                    strAmountInWordsLeft = new FigursToWords().NumberToText(inLeftPart) + " " + strCurrency;
+                    FigursToWords tw = new FigursToWords(FigursToWords.Criteria.Foreign);
+                    strAmountInWordsLeft = new FigursToWords(FigursToWords.Criteria.Foreign).ConvertToWord(inLeftPart.ToString(), Color.AntiqueWhite) + " " + strCurrency;
                 }
                 if ((inRightPart = int.Parse(strAmount[1].Replace(",", ""))) > 0)
                 {
-                    strAmountInWordsRight = new FigursToWords().NumberToText(inRightPart) + " " + strFractionalPart;
+                    strAmountInWordsRight = new FigursToWords(FigursToWords.Criteria.Foreign).ConvertToWord(inRightPart.ToString(),Color.AntiqueWhite) + " " + strFractionalPart;
                     if (inLeftPart > 0)
                     {
                         strAmountInWordsRight = " And " + strAmountInWordsRight;
@@ -292,7 +293,7 @@ namespace AbayChequeMagic
                 }
                 lblAmountInWords1.Text = lblCombined.Text.Substring(0, FindBreakPoint(GetNumberOfPrintableCharactres(lblCombined.Text, lblAmountInWords1), lblCombined));
                 lblAmountInWords2.Text = lblCombined.Text.Substring(lblAmountInWords1.Text.Length);
-
+                
             }
             else
             {
@@ -490,6 +491,7 @@ namespace AbayChequeMagic
             }
             inNumberOfPrintableCharactres = inIndex;
             return inIndex;
+           // return 70;
         }
         private Control FindControl(string accessibleName)
         {
@@ -1193,6 +1195,7 @@ namespace AbayChequeMagic
             {
                 
                 SetAmountInWords();
+
                 if (txtAmount.Text.Trim() != string.Empty)
                 {
                     if (decimal.Parse(txtAmount.Text) == 0)
@@ -1565,11 +1568,6 @@ namespace AbayChequeMagic
 
         }
 
-        private void txtPayee_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void txtPayee_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -1836,8 +1834,8 @@ namespace AbayChequeMagic
             string printer = "rundll32 printui.dll,PrintUIEntry /ip";
             string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
-            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
-            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
             proc.Start();
         }
         private void installPrinter2()

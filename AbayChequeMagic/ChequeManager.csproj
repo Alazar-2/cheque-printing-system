@@ -180,6 +180,7 @@
     <Compile Include="MovableControl.Designer.cs">
       <DependentUpon>MovableControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultiCurrency.cs" />
     <Compile Include="MyMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +205,9 @@
       <DependentUpon>Add printer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\crptPaymentVoucherPrint.rdlc" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChequeDetailsHome.resx">
       <DependentUpon>frmChequeDetailsHome.cs</DependentUpon>
     </EmbeddedResource>

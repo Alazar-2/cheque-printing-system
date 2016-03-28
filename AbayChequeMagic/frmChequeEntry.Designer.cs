@@ -34,9 +34,7 @@
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxAddOrRemoveFields = new System.Windows.Forms.GroupBox();
-
             this.btnAddPrinter = new System.Windows.Forms.Button();
-
             this.btnInstallPrinter = new System.Windows.Forms.Button();
             this.rb900 = new System.Windows.Forms.RadioButton();
             this.rb600 = new System.Windows.Forms.RadioButton();
@@ -192,9 +190,7 @@
             // 
             // gbxAddOrRemoveFields
             // 
-
             this.gbxAddOrRemoveFields.Controls.Add(this.btnAddPrinter);
-
             this.gbxAddOrRemoveFields.Controls.Add(this.btnInstallPrinter);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb900);
             this.gbxAddOrRemoveFields.Controls.Add(this.rb600);
@@ -226,7 +222,6 @@
             this.gbxAddOrRemoveFields.TabStop = false;
             this.gbxAddOrRemoveFields.Text = "Adjust labels";
             // 
-
             // btnAddPrinter
             // 
             this.btnAddPrinter.Location = new System.Drawing.Point(867, 39);
@@ -238,7 +233,6 @@
             this.btnAddPrinter.Visible = false;
             this.btnAddPrinter.Click += new System.EventHandler(this.btnAddPrinter_Click);
             // 
-
             // btnInstallPrinter
             // 
             this.btnInstallPrinter.Location = new System.Drawing.Point(518, 50);
@@ -685,9 +679,8 @@
             this.lblAmountInWords2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmountInWords2.Location = new System.Drawing.Point(38, 196);
             this.lblAmountInWords2.Name = "lblAmountInWords2";
-            this.lblAmountInWords2.Size = new System.Drawing.Size(474, 22);
+            this.lblAmountInWords2.Size = new System.Drawing.Size(509, 22);
             this.lblAmountInWords2.TabIndex = 4;
-            this.lblAmountInWords2.Visible = false;
             // 
             // lblAmountInWords1
             // 
@@ -696,7 +689,7 @@
             this.lblAmountInWords1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmountInWords1.Location = new System.Drawing.Point(48, 169);
             this.lblAmountInWords1.Name = "lblAmountInWords1";
-            this.lblAmountInWords1.Size = new System.Drawing.Size(534, 21);
+            this.lblAmountInWords1.Size = new System.Drawing.Size(649, 21);
             this.lblAmountInWords1.TabIndex = 3;
             // 
             // lblPayeeLine2
@@ -857,7 +850,6 @@
             this.txtPayee.Name = "txtPayee";
             this.txtPayee.Size = new System.Drawing.Size(240, 20);
             this.txtPayee.TabIndex = 11;
-            this.txtPayee.TextChanged += new System.EventHandler(this.txtPayee_TextChanged);
             this.txtPayee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPayee_KeyPress);
             // 
             // cbxPrintPayeeAccountNumber

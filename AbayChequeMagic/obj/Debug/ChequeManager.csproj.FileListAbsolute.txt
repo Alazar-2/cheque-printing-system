@@ -1,64 +1,23 @@
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe.config
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Properties.Resources.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csproj.GenerateResource.Cache
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MyMessageBox.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeDetailsHome.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeStatus.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmLogin.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMDI.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmSelectCheque.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.cache
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMdiHeader.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.pdb
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.exe
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.pdb
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeEntry.resources
-C:\CSharp\cotem Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csprojResolveAssemblyReference.cache
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe.config
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.exe
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.pdb
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.pdb
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeDetailsHome.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeEntry.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeStatus.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmLogin.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMDI.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMdiHeader.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmSelectCheque.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MyMessageBox.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Properties.Resources.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csproj.GenerateResource.Cache
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.cache
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Add_printer.resources
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csprojResolveAssemblyReference.cache
-C:\Csharp\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MovableControl.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe.config
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.exe
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.pdb
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\bin\Debug\AbayChequeMagic.pdb
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Add_printer.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeDetailsHome.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeEntry.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeStatus.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmLogin.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMDI.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMdiHeader.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmSelectCheque.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MovableControl.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.MyMessageBox.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.Properties.Resources.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csproj.GenerateResource.Cache
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.cache
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\RdlCompile.compiled
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.InstallPrinter.resources
-<<<<<<< HEAD
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.PrinterList.resources
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\ChequeManager.csprojResolveAssemblyReference.cache
-C:\CSharp\AbayChequeMagic Latest\AbayChequeMagic\AbayChequeMagic\obj\Debug\AbayChequeMagic.PrinterIPAddress.resources
-=======
->>>>>>> e09e754058fdfec2750cc34687d917d90bcd4fe2
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.Add_printer.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.Form1.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeDetailsHome.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeEntry.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmChequeStatus.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmLogin.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMDI.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmMdiHeader.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.frmSelectCheque.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.InstallPrinter.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.MovableControl.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.MyMessageBox.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.PrinterIPAddress.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.PrinterList.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.Properties.Resources.resources
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\ChequeManager.csproj.GenerateResource.Cache
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\RdlCompile.cache
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\RdlCompile.compiled
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe.config
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\bin\Debug\AbayChequeMagic.exe
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\bin\Debug\AbayChequeMagic.pdb
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.exe
+C:\Csharp\AbayChequeMagic Latest\cheque-printing-system\AbayChequeMagic\obj\Debug\AbayChequeMagic.pdb
