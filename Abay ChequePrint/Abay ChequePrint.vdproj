@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_67436F0D82D34BE7AD77E564C29D49F7"
+        "MsmKey" = "8:_646B5220D5F84478B067C08EB15EC92C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -121,7 +121,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_67436F0D82D34BE7AD77E564C29D49F7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_646B5220D5F84478B067C08EB15EC92C"
             {
             "SourcePath" = "8:..\\Icon.ico"
             "TargetName" = "8:Icon.ico"
@@ -198,7 +198,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Abay ChequePrint"
         "ProductCode" = "8:{19CBBDFC-5C22-479B-ADC4-9C2FFB2C9F39}"
-        "PackageCode" = "8:{2BA11572-B6A8-4A80-B0F1-23E16408153F}"
+        "PackageCode" = "8:{5DEFCA64-5DF4-441A-A32A-855D16AE57E4}"
         "UpgradeCode" = "8:{412D0510-1E85-4D48-9022-0A974F2F6E3C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -329,7 +329,7 @@
             "Target" = "8:_51BEBCE021B24F52806901FAB80A6A0B"
             "Folder" = "8:_EEB7774645D744CA82CE73CFA5237EE2"
             "WorkingFolder" = "8:_81D2567E790540B883CE28AC7B0971F8"
-            "Icon" = "8:_67436F0D82D34BE7AD77E564C29D49F7"
+            "Icon" = "8:_646B5220D5F84478B067C08EB15EC92C"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_13B477A8248342448207892A7F51A46F"
@@ -343,7 +343,7 @@
             "Target" = "8:_51BEBCE021B24F52806901FAB80A6A0B"
             "Folder" = "8:_DD4D8D60F183493B8AD59950D87972FA"
             "WorkingFolder" = "8:_81D2567E790540B883CE28AC7B0971F8"
-            "Icon" = "8:_67436F0D82D34BE7AD77E564C29D49F7"
+            "Icon" = "8:_646B5220D5F84478B067C08EB15EC92C"
             "Feature" = "8:"
             }
         }

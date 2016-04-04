@@ -1601,7 +1601,6 @@ namespace AbayChequeMagic
                     //    }
                     //}
                     #endregion
-
                 }
                 else
                 {
@@ -1712,12 +1711,8 @@ namespace AbayChequeMagic
                                 }
                                 else if (cntrl.Name == "lblAmountInWords1")
                                 {
-                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X+200 , cntrl.Location.Y+136); 
-                                }
-                                else if (cntrl.Name == "lblAmountInWords2")
-                                {
                                     g.DrawString(cntrl.Text, font, brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
-                                }
+                                } 
                                 else
                                 {
                                     g.DrawString(cntrl.Text, font, brush, cntrl.Location.X, cntrl.Location.Y);
@@ -1849,8 +1844,8 @@ namespace AbayChequeMagic
             string printer = "rundll32 printui.dll,PrintUIEntry /ip";
             string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
-            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
-            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
             proc.Start();
         }
         private void installPrinter2()
@@ -1903,62 +1898,6 @@ namespace AbayChequeMagic
         private void btnAddPrinter_Click(object sender, EventArgs e)
         {
 
-        }
-
-       
-        private void btnPrinterIP_Click(object sender, EventArgs e)
-        {
-           string ipAddress= txtIPAddress.Text;
-           #region printcode of cheque magic
-           try
-           {
-               // if (cmbPayee.SelectedValue != null)
-               if (txtPayee.Text != "")
-               {
-                   Common.decPayeeId = 1;// decimal.Parse(cmbPayee.SelectedValue.ToString());
-                   Common.strPayeeName = txtPayee.Text;
-               }
-               if (cmbExpense.SelectedItem != null)
-               {
-                   Common.strExpense = cmbExpense.SelectedItem.ToString();
-               }
-               Common.strCurrency = strCurrency;
-               Common.strIssuedDate = dtpDateOnCheque.Value.ToString("dd:MMM:yyyy");
-               Common.strAmount = decchequeAmount.ToString();
-               if (SaveChequeDetails())
-               {
-                   //  UpdateBalance();
-                   //   strPrinterName = "";
-                   //   strPrinterName = new CompanySP().CompanySelectPrinter();
-                   //if ((strPrinterName = new CompanySP().CompanySelectPrinter()) != "")
-                   //{
-                   //    pd.PrinterSettings.PrinterName = '';
-                   //inHardMarginY = (int)(pd.PrinterSettings.DefaultPageSettings.HardMarginY);
-
-                   //}
-                   //LeafSP SPleaf = new LeafSP();
-                   //if (SPleaf.LeafIsPrinted(decLeafId) && !Messages.QuestionMessage("This cheque has already been printed. Do you want to reprint it?"))
-                   //{
-                   //    return;
-                   //}
-                   DataTable dtbl = dtblLayout;
-                   DoPrint();
-                   //if (isPrintCanceled)
-                   //{
-                   //    SPleaf.LeafSetAsPrinted(decLeafId);//sets both IsPrinted and ChequeStatus
-                   //}
-                   //   decimal decLeafIdOld = decLeafId;
-                   FillGrid();
-                   //  Common.strLeafId = decLeafIdOld.ToString();
-                   PrintcoveringLetter();
-                   PrintPaymentVoucher();
-               }
-           }
-           catch (Exception ex)
-           {
-               Messages.ExceptionMessage(ex.Message);
-           }
-           #endregion
         }
 
         private void txtPayee_TextChanged(object sender, EventArgs e)

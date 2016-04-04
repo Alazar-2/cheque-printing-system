@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChequeEntry));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtIPAddress = new System.Windows.Forms.TextBox();
-            this.btnPrinterIP = new System.Windows.Forms.Button();
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxAddOrRemoveFields = new System.Windows.Forms.GroupBox();
@@ -137,9 +134,6 @@
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBody.Controls.Add(this.label4);
-            this.pnlBody.Controls.Add(this.txtIPAddress);
-            this.pnlBody.Controls.Add(this.btnPrinterIP);
             this.pnlBody.Controls.Add(this.btnPrintPreview);
             this.pnlBody.Controls.Add(this.btnClose);
             this.pnlBody.Controls.Add(this.gbxAddOrRemoveFields);
@@ -156,36 +150,6 @@
             this.pnlBody.Padding = new System.Windows.Forms.Padding(10);
             this.pnlBody.Size = new System.Drawing.Size(1013, 671);
             this.pnlBody.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(221, 618);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Set IP Address";
-            // 
-            // txtIPAddress
-            // 
-            this.txtIPAddress.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIPAddress.Location = new System.Drawing.Point(324, 614);
-            this.txtIPAddress.MaxLength = 12;
-            this.txtIPAddress.Name = "txtIPAddress";
-            this.txtIPAddress.Size = new System.Drawing.Size(189, 20);
-            this.txtIPAddress.TabIndex = 12;
-            // 
-            // btnPrinterIP
-            // 
-            this.btnPrinterIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrinterIP.Location = new System.Drawing.Point(530, 611);
-            this.btnPrinterIP.Name = "btnPrinterIP";
-            this.btnPrinterIP.Size = new System.Drawing.Size(95, 25);
-            this.btnPrinterIP.TabIndex = 32;
-            this.btnPrinterIP.Text = "Print";
-            this.btnPrinterIP.UseVisualStyleBackColor = true;
-            this.btnPrinterIP.Click += new System.EventHandler(this.btnPrinterIP_Click);
             // 
             // btnPrintPreview
             // 
@@ -1032,7 +996,6 @@
             this.Text = "frmChequeEntry";
             this.Load += new System.EventHandler(this.frmChequeEntry_Load);
             this.pnlBody.ResumeLayout(false);
-            this.pnlBody.PerformLayout();
             this.gbxAddOrRemoveFields.ResumeLayout(false);
             this.gbxAddOrRemoveFields.PerformLayout();
             this.pnlWorkSpace.ResumeLayout(false);
@@ -1132,8 +1095,5 @@
         private System.Windows.Forms.RadioButton rb300;
         private System.Windows.Forms.Button btnInstallPrinter;
         private System.Windows.Forms.Button btnAddPrinter;
-        private System.Windows.Forms.Button btnPrinterIP;
-        private System.Windows.Forms.TextBox txtIPAddress;
-        private System.Windows.Forms.Label label4;
     }
 }
