@@ -1574,24 +1574,34 @@ namespace AbayChequeMagic
             {
                 if (txtPayee.Text.Length > 0)
                 {
-                    if (txtPayee.Text != null)
+                    if (e.KeyChar > '0' && e.KeyChar < '9')
                     {
-
-                        lblPayeeLine1.Text = txtPayee.Text.Substring(0, FindBreakPoint(GetNumberOfPrintableCharactres(txtPayee.Text, lblPayeeLine1), txtPayee));
-                        if (IsPayeeLine2)
+                        if (e.KeyChar != (char)8 && e.KeyChar != (char)46)
                         {
-                            lblPayeeLine2.Text = txtPayee.Text.Substring(lblPayeeLine1.Text.Length);
-                            if (lblPayeeLine2.Text.Length > 0)
-                            {
-                                if (IsPayeeLine2)
-                                {
-                                    lblPayeeLine2.Visible = true;
-                                }
-                            }
+                            MessageBox.Show("you pressed: " + e.KeyChar + "\n please enter text only");
+                            e.KeyChar = (char)0;
+                            return;
                         }
                     }
-                }
+                    #region previous Code
+                    //if (txtPayee.Text != null)
+                    //{
 
+                    //    lblPayeeLine1.Text = txtPayee.Text.Substring(0, FindBreakPoint(GetNumberOfPrintableCharactres(txtPayee.Text, lblPayeeLine1), txtPayee));
+                    //    if (IsPayeeLine2)
+                    //    {
+                    //        lblPayeeLine2.Text = txtPayee.Text.Substring(lblPayeeLine1.Text.Length);
+                    //        if (lblPayeeLine2.Text.Length > 0)
+                    //        {
+                    //            if (IsPayeeLine2)
+                    //            {
+                    //                lblPayeeLine2.Visible = true;
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    #endregion
+                }
                 else
                 {
                     lblPayeeLine1.Text = string.Empty;
@@ -1834,8 +1844,8 @@ namespace AbayChequeMagic
             string printer = "rundll32 printui.dll,PrintUIEntry /ip";
             string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
-            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
-            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
             proc.Start();
         }
         private void installPrinter2()
@@ -1888,6 +1898,11 @@ namespace AbayChequeMagic
         private void btnAddPrinter_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPayee_TextChanged(object sender, EventArgs e)
+        {
+            lblPayeeLine1.Text = txtPayee.Text;
         }
     }
 }

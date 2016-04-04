@@ -850,6 +850,7 @@
             this.txtPayee.Name = "txtPayee";
             this.txtPayee.Size = new System.Drawing.Size(240, 20);
             this.txtPayee.TabIndex = 11;
+            this.txtPayee.TextChanged += new System.EventHandler(this.txtPayee_TextChanged);
             this.txtPayee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPayee_KeyPress);
             // 
             // cbxPrintPayeeAccountNumber
