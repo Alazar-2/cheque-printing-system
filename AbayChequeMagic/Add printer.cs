@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Management;
 using System.Net;
+using Microsoft.Win32;
 
 namespace AbayChequeMagic
 {
@@ -22,48 +23,107 @@ namespace AbayChequeMagic
         DataTable dtblAddedPrinters;
         private void Add_printer_Load(object sender, EventArgs e)
         {
-          //  ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Printer");
-            var printerQuery = new ManagementObjectSearcher("SELECT * from Win32_Printer");
-            foreach (var printer in printerQuery.Get())
-            {
-                try
-                {
-                    var name = printer.GetPropertyValue("Name");
-                    var status = printer.GetPropertyValue("Status");
-                    var isDefault = printer.GetPropertyValue("Default");
-                    //var ipAddress = printer.GetPropertyValue("PortNumber");
-                    var isNetworkPrinter = printer.GetPropertyValue("Network");
-                    var xResoltion = printer.GetPropertyValue("horizontalResolution");
-                    var yResoltion = printer.GetPropertyValue("VerticalResolution");
-                    //Console.WriteLine("{0} (Status: {1}, Default: {2}, Network: {3}",
-                    //            name, status, isDefault, isNetworkPrinter);
-                 //   var portName = printer.GetPropertyValue("IpAddress");
-                    //IPHostEntry hostInfo = Dns.GetHostByName("MachineName");
-                    //MessageBox.Show(hostInfo.ToString());
-                  ///  string strIPAdress = hostInfo.Addre­ssList[0].ToString(); 
-
-                   // MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " ntked? " + " portName " + portName);
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
+           // getListOfPrinterProperties2();        
             try
             {
                 foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
                 {
                     lbxInstalledPrinter.Items.Add(printer);
                 }
-                //dtblAddedPrinters = new PrinterSP().PrinterViewAll();
-                //foreach (DataRow dr in dtblAddedPrinters.Rows)
-                //{
-                //    lbxcChoosenPrinter.Items.Add(dr["printerName"]);
-                //}
+                dtblAddedPrinters = new PrinterSP().PrinterViewAll();
+                foreach (DataRow dr in dtblAddedPrinters.Rows)
+                {
+                    lbxcChoosenPrinter.Items.Add(dr["printerName"]);
+                }
             }
             catch (Exception ex)
             {
                 Messages.ExceptionMessage(ex.Message);
+            }
+        }
+
+        private void getListOfPrinterProperties()
+        {
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Printer");
+           // var printerQuery = new ManagementObjectSearcher("SELECT * from Win32_Printer");
+            foreach (var printer in searcher.Get())
+            {
+                try
+                {
+                    var name = printer.GetPropertyValue("Name");
+                    var status = printer.GetPropertyValue("Status");
+                    var isDefault = printer.GetPropertyValue("Default");
+                    ////var ipAddress = printer.GetPropertyValue("PortNumber");
+                    //var isNetworkPrinter = printer.GetPropertyValue("Network");
+                    //var xResoltion = printer.GetPropertyValue("horizontalResolution");
+                    //var yResoltion = printer.GetPropertyValue("VerticalResolution");
+                    //Console.WriteLine("{0} (Status: {1}, Default: {2}, Network: {3}",
+                    //            name, status, isDefault, isNetworkPrinter);
+                    var portName = printer.GetPropertyValue("IpAddress");
+                    //IPHostEntry hostInfo = Dns.GetHostByName("MachineName");
+                    //MessageBox.Show(hostInfo.ToString());
+                  ///  string strIPAdress = hostInfo.Addre­ssList[0].ToString(); 
+                    string IP="xx";
+                    //RegistryKey key = Registry.LocalMachine.OpenSubKey(@"System\CurrentControlSet\Control\Print\Monitors\Standard TCP/IP Port\Ports\" + portName, RegistryKeyPermissionCheck.Default, System.Security.AccessControl.RegistryRights.QueryValues);
+                    
+                    //if (key != null)
+                    //{
+                    //     IP = (String)key.GetValue("IPAddress", String.Empty, RegistryValueOptions.DoNotExpandEnvironmentNames);
+                    //}
+                    MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " ntked? " + " portName " + portName+ " IP "+IP);
+                  
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }  
+        }
+        private void getListOfPrinterProperties2()
+        {
+            var printerQuery = new ManagementObjectSearcher("SELECT * from Win32_Printer");
+            foreach (var printer in printerQuery.Get())
+            {
+                var name = printer.GetPropertyValue("Name");
+                var status = printer.GetPropertyValue("Status");
+                var isDefault = printer.GetPropertyValue("Default");
+                var isNetworkPrinter = printer.GetPropertyValue("Network");
+                var portName = printer.GetPropertyValue("portName");
+              //  MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " IsNetworked " + isNetworkPrinter);
+                string IP = "xx";
+                RegistryKey key = Registry.LocalMachine.OpenSubKey(@"System\CurrentControlSet\Control\Print\Monitors\Standard TCP/IP Port\Ports\" + portName, RegistryKeyPermissionCheck.Default, System.Security.AccessControl.RegistryRights.QueryValues);
+
+                if (key != null)
+                {
+                    IP = (String)key.GetValue("IPAddress", String.Empty, RegistryValueOptions.DoNotExpandEnvironmentNames);
+                }
+                MessageBox.Show("name: " + name + " status: " + status + " isdefault " + isDefault + " ntked? " + " portName " + portName + " IP " + IP);
+                  
+            }
+        }
+
+        private void getListOfPrinterProperties3()
+        {
+            // USING WMI. (WINDOWS MANAGEMENT INSTRUMENTATION)
+
+            System.Management.ManagementScope objMS =
+                new System.Management.ManagementScope(ManagementPath.DefaultPath);
+            objMS.Connect();
+
+            SelectQuery objQuery = new SelectQuery ("SELECT * FROM Win32_Printer");
+            ManagementObjectSearcher objMOS = new ManagementObjectSearcher(objMS, objQuery);
+            System.Management.ManagementObjectCollection objMOC = objMOS.Get();
+
+            foreach (ManagementObject Printers in objMOC)
+            {
+                if (Convert.ToBoolean(Printers["Local"]))       // LOCAL PRINTERS.
+                {
+                    lbxInstalledPrinter.Items.Add(Printers["Name"]);
+                }
+                if (Convert.ToBoolean(Printers["Network"]))     // ALL NETWORK PRINTERS.
+                {
+                    lbxInstalledPrinter.Items.Add(Printers["Name"]);
+                }
             }
         }
         private void PrinterIpAddress()
@@ -156,7 +216,7 @@ namespace AbayChequeMagic
         string strDefaultPrinterName = string.Empty;
 
         [DllImport("winspool.drv", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern bool SetDefaultPrinter(string printerName);
+         private static extern bool SetDefaultPrinter(string printerName);
         private void lkbtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
