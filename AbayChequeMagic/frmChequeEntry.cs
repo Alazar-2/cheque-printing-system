@@ -951,6 +951,8 @@ namespace AbayChequeMagic
             //MessageBox.Show(pkResolution.ToString());
             //int cnt = pd.PrinterSettings.PrinterResolutions.Count;
             //MessageBox.Show(cnt.ToString());
+            Login.Login lo = new Login.Login();
+            lo.Close();
             rb600.Checked = true;
             try
             {
@@ -1699,7 +1701,7 @@ namespace AbayChequeMagic
                             {
                                 if (cntrl.Name == "lblDate")
                                 {
-                                    g.DrawString(cntrl.Text, new Font("Comic Sans MS", 7.25F, System.Drawing.FontStyle.Regular), brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
+                                    g.DrawString(cntrl.Text, new Font("Comic Sans MS", 7.25F, System.Drawing.FontStyle.Regular), brush, cntrl.Location.X+200 , cntrl.Location.Y+129);
                                 }
                                 else if (cntrl.Name == "lblAmount")
                                 {
@@ -1712,6 +1714,10 @@ namespace AbayChequeMagic
                                 else if (cntrl.Name == "lblAmountInWords1")
                                 {
                                     g.DrawString(cntrl.Text, font, brush, cntrl.Location.X+200 , cntrl.Location.Y+136);
+                                }
+                                else if (cntrl.Name == "lblAmountInWords2")
+                                {
+                                    g.DrawString(cntrl.Text, font, brush, cntrl.Location.X + 200, cntrl.Location.Y + 136);
                                 } 
                                 else
                                 {
@@ -1841,11 +1847,15 @@ namespace AbayChequeMagic
 
         private void btnInstallPrinter_Click(object sender, EventArgs e)
         {
-            string printer = "rundll32 printui.dll,PrintUIEntry /ip";
-            string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
+            installPrinter1();
+        }
+        private void installPrinter1()
+        {
+            //string printer = "rundll32 printui.dll,PrintUIEntry /ip";
+            //string setAsDefault="rundll32 printui.dll,PrintUIEntry /y /n 'Tsion'";
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
-            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
-            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\cheque-printing-system\\AddPrinter";
+            proc.StartInfo.FileName = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
+            proc.StartInfo.WorkingDirectory = "C:\\CSharp\\AbayChequeMagic Latest\\AbayChequeMagic\\AddPrinter";
             proc.Start();
         }
         private void installPrinter2()

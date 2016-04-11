@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hrModelStoreContainer" CdmEntityContainer="hrEntities2">
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="hrModel.group">
+        <MappingFragment StoreEntitySet="groups">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="is_builtin" ColumnName="is_builtin" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="modified" ColumnName="modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups_permissions">
+      <EntityTypeMapping TypeName="hrModel.groups_permissions">
+        <MappingFragment StoreEntitySet="groups_permissions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="permission_id" ColumnName="permission_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups_users">
+      <EntityTypeMapping TypeName="hrModel.groups_users">
+        <MappingFragment StoreEntitySet="groups_users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permissions">
+      <EntityTypeMapping TypeName="hrModel.permission">
+        <MappingFragment StoreEntitySet="permissions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="prerequisite" ColumnName="prerequisite" />
+          <ScalarProperty Name="lft" ColumnName="lft" />
+          <ScalarProperty Name="rght" ColumnName="rght" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="hrModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="security_question" ColumnName="security_question" />
+          <ScalarProperty Name="security_answer" ColumnName="security_answer" />
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="payroll_id" ColumnName="payroll_id" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="modified" ColumnName="modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewusergroups">
+      <EntityTypeMapping TypeName="hrModel.viewusergroup">
+        <MappingFragment StoreEntitySet="viewusergroup">
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="payroll_id" ColumnName="payroll_id" />
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="groupName" ColumnName="groupName" />
+          <ScalarProperty Name="groupId" ColumnName="groupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

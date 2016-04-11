@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hrModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="group">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_builtin" Type="Boolean" Nullable="false" />
+    <Property Name="created" Type="DateTime" />
+    <Property Name="modified" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="groups_permissions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="permission_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="groups_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="permission">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="parent_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prerequisite" Type="Int32" Nullable="false" />
+    <Property Name="lft" Type="Int32" Nullable="false" />
+    <Property Name="rght" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="security_question" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="security_answer" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="person_id" Type="Int32" Nullable="false" />
+    <Property Name="branch_id" Type="Int32" Nullable="false" />
+    <Property Name="payroll_id" Type="Int32" Nullable="false" />
+    <Property Name="created" Type="DateTime" Nullable="false" />
+    <Property Name="modified" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="hrEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="groups" EntityType="Self.group" />
+    <EntitySet Name="groups_permissions" EntityType="Self.groups_permissions" />
+    <EntitySet Name="groups_users" EntityType="Self.groups_users" />
+    <EntitySet Name="permissions" EntityType="Self.permission" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="viewusergroups" EntityType="hrModel.viewusergroup" />
+  </EntityContainer>
+  <EntityType Name="viewusergroup">
+    <Key>
+      <PropertyRef Name="groupId" />
+      <PropertyRef Name="groupName" />
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="person_id" />
+      <PropertyRef Name="payroll_id" />
+      <PropertyRef Name="branch_id" />
+    </Key>
+    <Property Name="groupId" Type="Int32" Nullable="false" />
+    <Property Name="groupName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="person_id" Type="Int32" Nullable="false" />
+    <Property Name="payroll_id" Type="Int32" Nullable="false" />
+    <Property Name="branch_id" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

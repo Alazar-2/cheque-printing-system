@@ -16,8 +16,10 @@ namespace AbayChequeMagic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmChequeEntry ce = new frmChequeEntry();
-            ce.WindowState = FormWindowState.Maximized;
+           // frmChequeEntry ce = new frmChequeEntry();
+            Login.Login ce = new Login.Login();
+           // ce.WindowState = FormWindowState.Maximized;
+            ce.WindowState = FormWindowState.Normal;
             Application.Run(ce);
         }
     }
