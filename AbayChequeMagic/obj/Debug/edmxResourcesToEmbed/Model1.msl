@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="hrModelStoreContainer" CdmEntityContainer="hrEntities2">
+  <EntityContainerMapping StorageEntityContainer="hrModelStoreContainer" CdmEntityContainer="hrEntities3">
     <EntitySetMapping Name="groups">
       <EntityTypeMapping TypeName="hrModel.group">
         <MappingFragment StoreEntitySet="groups">
@@ -44,37 +44,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="users">
-      <EntityTypeMapping TypeName="hrModel.user">
-        <MappingFragment StoreEntitySet="users">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="is_active" ColumnName="is_active" />
-          <ScalarProperty Name="security_question" ColumnName="security_question" />
-          <ScalarProperty Name="security_answer" ColumnName="security_answer" />
-          <ScalarProperty Name="person_id" ColumnName="person_id" />
-          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
-          <ScalarProperty Name="payroll_id" ColumnName="payroll_id" />
-          <ScalarProperty Name="created" ColumnName="created" />
-          <ScalarProperty Name="modified" ColumnName="modified" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="viewusergroups">
       <EntityTypeMapping TypeName="hrModel.viewusergroup">
         <MappingFragment StoreEntitySet="viewusergroup">
-          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
-          <ScalarProperty Name="payroll_id" ColumnName="payroll_id" />
-          <ScalarProperty Name="person_id" ColumnName="person_id" />
-          <ScalarProperty Name="is_active" ColumnName="is_active" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="userId" ColumnName="userId" />
-          <ScalarProperty Name="groupName" ColumnName="groupName" />
           <ScalarProperty Name="groupId" ColumnName="groupId" />
+          <ScalarProperty Name="groupName" ColumnName="groupName" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="payroll_id" ColumnName="payroll_id" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

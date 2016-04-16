@@ -39,23 +39,6 @@
     <Property Name="lft" Type="int" Nullable="false" />
     <Property Name="rght" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="users">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="password" Type="varchar" MaxLength="40" Nullable="false" />
-    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="is_active" Type="bool" Nullable="false" />
-    <Property Name="security_question" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="security_answer" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="person_id" Type="int" Nullable="false" />
-    <Property Name="branch_id" Type="int" Nullable="false" />
-    <Property Name="payroll_id" Type="int" Nullable="false" />
-    <Property Name="created" Type="datetime" Precision="0" Nullable="false" />
-    <Property Name="modified" Type="datetime" Precision="0" Nullable="false" />
-  </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'def.hr.viewusergroup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="viewusergroup">
@@ -87,7 +70,6 @@ warning 6002: The table/view 'def.hr.viewusergroup' does not have a primary key 
     <EntitySet Name="groups_permissions" EntityType="Self.groups_permissions" Schema="hr" store:Type="Tables" />
     <EntitySet Name="groups_users" EntityType="Self.groups_users" Schema="hr" store:Type="Tables" />
     <EntitySet Name="permissions" EntityType="Self.permissions" Schema="hr" store:Type="Tables" />
-    <EntitySet Name="users" EntityType="Self.users" Schema="hr" store:Type="Tables" />
     <EntitySet Name="viewusergroup" EntityType="Self.viewusergroup" store:Type="Views" store:Schema="hr">
       <DefiningQuery>SELECT
 `viewusergroup`.`groupId`, 

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChequeManager", "AbayCheque
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Abay ChequePrint", "Abay ChequePrint\Abay ChequePrint.vdproj", "{93733A39-F891-45D7-8F51-5C8D06B36EAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTest CSharp", "..\..\SqlTest CSharp\SqlTest CSharp\SqlTest CSharp.csproj", "{0CDFEFC4-D83A-4A6D-A0ED-7DD8B4846DB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTest CSharp", "..\..\SqlTest_CSharp\SqlTest CSharp\SqlTest CSharp\SqlTest CSharp.csproj", "{0CDFEFC4-D83A-4A6D-A0ED-7DD8B4846DB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

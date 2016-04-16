@@ -952,7 +952,7 @@ namespace AbayChequeMagic
             //int cnt = pd.PrinterSettings.PrinterResolutions.Count;
             //MessageBox.Show(cnt.ToString());
             Login.Login lo = new Login.Login();
-            lo.Close();
+            lo.Hide();
             rb600.Checked = true;
             try
             {
